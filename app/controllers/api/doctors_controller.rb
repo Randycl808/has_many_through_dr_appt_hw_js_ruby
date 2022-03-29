@@ -46,6 +46,6 @@ class Api::DoctorsController < ApplicationController
     #function for doctors that requires a name AND description to create a doctor for DB
     #must require a doctor name AND description to work
     def doctor_params
-        params.require(:doctor).permit(:name, description)
+        params.require(:doctor).permit(:name, :description)
     end
 end

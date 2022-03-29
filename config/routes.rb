@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   namespace :api do 
+    get 'all_data', to:"appointments#all_data"  
     resources :doctors
     resources :users
     resources :appointments
