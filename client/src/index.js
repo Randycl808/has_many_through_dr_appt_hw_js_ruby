@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Appointments from "./pages/Appointments";
 import Users from "./pages/Users";
 import Doctors from "./pages/Doctors";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

@@ -7,7 +7,7 @@ const Users = ()=>{
   
   return (
       <AxiosContainer title={'Users'}loading={loading} error={error}>
-          <StringifyJSON json={users} />
+          <StringifyJSON data={users} />
       </AxiosContainer>
   )
 }

@@ -1,11 +1,26 @@
 import useAxios from 'axios-hooks'
+import { Alert, Spinner} from 'react-bootstrap'
 
 const AxiosContainer = ({ title, loading, error, children})=>{
-  if(loading) return <p>Loading.. Please Wait</p>
-  if(error) return <p>Error Loading..</p>
+
+  const renderBody = ()=>{
+
+    if(loading) return <Spinner animation="border" role="status">
+    <span className="visually-hidden">Loading... Please wait</span>
+  </Spinner>
+
+    if(error) return <Alert variant="danger" dismissible>
+        <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+        <p>
+          Please try again. 
+        </p>
+      </Alert>
+    return children
+  }
   return (
       <div>
           <h1>{title}</h1>
+          {renderBody()}
           {children}
       </div>
   )

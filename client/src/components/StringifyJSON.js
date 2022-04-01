@@ -1,7 +1,7 @@
 
 
-const StringifyJSON = ({json})=>{
-  return <div>{JSON.stringify(json, null, 2)}</div>
+const StringifyJSON = ({data})=>{
+  return <div>{JSON.stringify(data, null, 2)}</div>
 }
 
 

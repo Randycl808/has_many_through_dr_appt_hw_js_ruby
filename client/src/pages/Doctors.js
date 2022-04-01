@@ -6,8 +6,8 @@ const Doctors = ()=>{
   const [{ data:doctors, loading, error}, refetch] = useAxios("/api/doctors")
   
   return (
-      <AxiosContainer title={'Doctors'}loading={loading} error={error}>
-          <StringifyJSON json={doctors} />
+      <AxiosContainer title={'Doctors'} loading={loading} error={error}>
+          <StringifyJSON data={doctors} />
       </AxiosContainer>
   )
 }
